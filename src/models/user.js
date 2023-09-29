@@ -37,6 +37,8 @@ const userShema = mongoose.Schema(
             }
         ]
 
+    },{
+        timestamps: true
     }
 )
 

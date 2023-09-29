@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {register} from "../controllers/postUser.js"; // Importa los controladores de "auth.js"
+import {register} from "../controllers/user/postUser.js"; // Importa los controladores de "auth.js"
 
 const userRouter = Router()
 

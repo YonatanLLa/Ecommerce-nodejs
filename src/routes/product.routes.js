@@ -1,13 +1,21 @@
 import { Router } from "express";
-import { postProduct, postCategory } from "../controllers/product/postProduct.js"
-import { getAllProduct } from "../controllers/product/getProducts.js"
-import { putCategories } from "../controllers/product/putProducts.js"
+import { postProduct } from "../controllers/product/postProduct.js";
+import { postCategory } from "../controllers/category/postCategory.js";
+import { getAllProduct, getAllProductDetail } from "../controllers/product/getProducts.js";
+import { putCategories } from "../controllers/category/putCategory.js";
+import { getAllCategory } from "../controllers/category/getCategory.js";
 
-const productRouter = Router()
+const productRouter = Router();
 
-productRouter.get("/all", getAllProduct)
-productRouter.post("/create",postProduct )
-productRouter.post("/category", postCategory)
-productRouter.put("/:idCategory", putCategories)
+// Product
+productRouter.get("/all", getAllProduct);
+productRouter.get("/all/:idDetail", getAllProductDetail);
 
-export default productRouter
+productRouter.post("/create", postProduct);
+
+//Category
+productRouter.get("/category", getAllCategory);
+productRouter.post("/category", postCategory);
+productRouter.put("/:idCategory", putCategories);
+
+export default productRouter;

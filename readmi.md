@@ -1,5 +1,5 @@
 # Ecommerce de node js
-
+    Es una tienda de ropas para varones
 ## 1.- Rutas
 ### Ruta inicial 
 ```js

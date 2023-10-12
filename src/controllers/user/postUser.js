@@ -32,7 +32,6 @@ export const login = async (req, res) => {
     if (!existEmail) {
       throw new Error("Email no exist");
     }
-    console.log(existEmail);
 
     const comparePassword = await bcrypt.compare(password, existEmail.password);
 
